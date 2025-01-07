@@ -1,0 +1,35 @@
+{
+    "name": "MCPServer.Net.Test",
+    "description": "Test MCP Server implementation with calculator, file system, and greeting functionality",
+    "version": "1.0.0",
+    "author": "Biztactix",
+    "repository": "https://github.com/Biztactix-Ryan/MCPServer.Net",
+    "branch": "main",
+    "installation": {
+        "type": "DotNet",
+        "minVersion": "7.0",
+        "maxVersion": "8.0",
+        "entryPoint": "MCPServer.Net.Test/bin/Debug/net9.0/MCPServer.exe",
+        "installCommands": [
+            "dotnet restore",
+            "dotnet build"
+        ],
+        "updateCommands": [
+            "dotnet restore",
+            "dotnet build"
+        ]
+    },
+    "parameters": [
+        {
+            "name": "logPath",
+            "description": "Path to the log file (optional)",
+            "required": false,
+            "type": "path",
+            "validation": ".*\\.log$"
+        }
+    ],
+    "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+    },
+    "dependencies": []
+}
